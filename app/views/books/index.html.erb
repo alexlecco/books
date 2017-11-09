@@ -1,6 +1,9 @@
 <h1>Libros</h1>
 <% if signed_in? %>
   <%= link_to "Nuevo Libro", new_book_path %>
+  <% if current_user.admin? %>
+    <%= link_to "Nueva Categoria", new_category_path %>
+  <% end %>
 <% end %>
 <table border="1">
   <thead>
