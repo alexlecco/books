@@ -9,6 +9,7 @@
       <th>Descripción</th>
       <th>Fecha de Publicación</th>
       <th>Precio</th>
+      <th>Categoria</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
         <td><%= book.description %></td>
         <td><%= book.publication_date %></td>
         <td>$ <%= book.price %></td>
+        <td><%= Category.find(book.category_id).name %></td>
         <% if signed_in? %>
           <td><%= link_to 'Mostrar', book %></td>
           <td><%= link_to 'Editar', edit_book_path(book) %></td>
