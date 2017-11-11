@@ -1,6 +1,10 @@
 <h1>Libros</h1>
-<%= link_to "Nuevo Libro", new_book_path %>
-<%= link_to "Nueva categoria", new_category_path %>
+<% if signed_in? %>
+  <%= link_to "Nuevo Libro", new_book_path %>
+  <% if current_user.admin? %>
+    <%= link_to "Nueva Categoria", new_category_path %>
+  <% end %>
+<% end %>
 <table border="1">
   <thead>
     <tr>
@@ -19,12 +23,14 @@
         <td><%= book.publication_date %></td>
         <td>$ <%= book.price %></td>
         <td><%= Category.find(book.category_id).name %></td>
-        <td><%= link_to 'Mostrar', book %></td>
-        <td><%= link_to 'Editar', edit_book_path(book) %></td>
-        <td><%= link_to 'Eliminar',
-                        book_path(book),
-                        method: :delete,
-                        data: { confirm: '¿Estás seguro?' } %></td>
+        <% if signed_in? %>
+          <td><%= link_to 'Mostrar', book %></td>
+          <td><%= link_to 'Editar', edit_book_path(book) %></td>
+          <td><%= link_to 'Eliminar',
+                          book_path(book),
+                          method: :delete,
+                          data: { confirm: '¿Estás seguro?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

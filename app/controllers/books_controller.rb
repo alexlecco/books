@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @books = Book.all
   end
@@ -41,17 +42,8 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-<<<<<<< HEAD
   private
   def book_params
     params.require(:book).permit(:title, :author, :description, :publication_date, :price, :category_id)
   end
-
-=======
-
-  private
-  def book_params
-    params.require(:book).permit(:title, :author, :description, :publication_date, :price)
-  end
->>>>>>> cbe583fe98d08f2253f6c9cd59266e58ca8f8b5f
 end
