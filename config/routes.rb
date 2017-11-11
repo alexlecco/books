@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get '/books', to: 'books#index'
+  root to: 'books#index'
+
+  resources :categories
+  resources :books
 end

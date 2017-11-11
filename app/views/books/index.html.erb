@@ -1,15 +1,30 @@
 <h1>Libros</h1>
-
+<%= link_to "Nuevo Libro", new_book_path %>
+<%= link_to "Nueva categoria", new_category_path %>
 <table border="1">
   <thead>
     <tr>
-      <th>Nombre</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Fecha de Publicación</th>
+      <th>Precio</th>
+      <th>Categoria</th>
     </tr>
   </thead>
   <tbody>
     <% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
+        <td><%= book.description %></td>
+        <td><%= book.publication_date %></td>
+        <td>$ <%= book.price %></td>
+        <td><%= Category.find(book.category_id).name %></td>
+        <td><%= link_to 'Mostrar', book %></td>
+        <td><%= link_to 'Editar', edit_book_path(book) %></td>
+        <td><%= link_to 'Eliminar',
+                        book_path(book),
+                        method: :delete,
+                        data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
