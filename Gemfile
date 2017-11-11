@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 gem 'coffee-script-source', '1.8.0'
+=======
+gem 'coffee-script-source', '1.9.0'
+>>>>>>> cbe583fe98d08f2253f6c9cd59266e58ca8f8b5f
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'

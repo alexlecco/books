@@ -20,10 +20,13 @@
     <%= f.label :price %>
     <%= f.number_field :price, step: :any %>
   </div>
+<<<<<<< HEAD
   <div>
     <%= f.label 'category' %>
     <%= f.collection_select(:category_id, Category.all, :id, :name, include_blank: 'seleccione una categoria') %>
   </div>
+=======
+>>>>>>> cbe583fe98d08f2253f6c9cd59266e58ca8f8b5f
 
   <div>
     <%= f.submit %>

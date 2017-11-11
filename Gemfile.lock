@@ -59,7 +59,11 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
+<<<<<<< HEAD
     coffee-script-source (1.8.0)
+=======
+    coffee-script-source (1.9.0)
+>>>>>>> cbe583fe98d08f2253f6c9cd59266e58ca8f8b5f
     concurrent-ruby (1.0.5)
     crass (1.0.2)
     erubi (1.7.0)
@@ -173,7 +177,11 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+<<<<<<< HEAD
   coffee-script-source (= 1.8.0)
+=======
+  coffee-script-source (= 1.9.0)
+>>>>>>> cbe583fe98d08f2253f6c9cd59266e58ca8f8b5f
   jbuilder (~> 2.5)
   puma (~> 3.7)
   rails (~> 5.1.3)
@@ -186,4 +194,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0
