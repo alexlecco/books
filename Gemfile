@@ -7,6 +7,10 @@ end
 
 gem 'coffee-script-source', '1.9.0'
 gem 'devise'
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap-sass'
+gem 'therubyracer', :platform => :ruby
+gem 'execjs'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
