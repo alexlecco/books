@@ -5,16 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-<<<<<<< HEAD
 gem 'jquery-rails'
-=======
 gem 'coffee-script-source', '1.9.0'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'bootstrap-sass'
 gem 'therubyracer', :platform => :ruby
 gem 'execjs'
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'

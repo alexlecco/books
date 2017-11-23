@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171028142516) do
-=======
 ActiveRecord::Schema.define(version: 20171111134806) do
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -24,8 +20,6 @@ ActiveRecord::Schema.define(version: 20171111134806) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "price"
-<<<<<<< HEAD
-=======
     t.integer "category_id"
     t.index ["category_id"], name: "index_books_on_category_id"
   end
@@ -52,7 +46,6 @@ ActiveRecord::Schema.define(version: 20171111134806) do
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
   end
 
 end

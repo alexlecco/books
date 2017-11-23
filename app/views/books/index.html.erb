@@ -1,8 +1,4 @@
 <h1>Libros</h1>
-<<<<<<< HEAD
-<%= link_to "Nuevo Libro", books_new_path %>
-<table border="1">
-=======
 <% if signed_in? %>
   <%= link_to "Nuevo Libro", new_book_path %>
   <% if current_user.admin? %>
@@ -10,18 +6,13 @@
   <% end %>
 <% end %>
 <table class="table table-sm table-inverse" border="1">
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
   <thead>
     <tr>
       <th>Título</th>
       <th>Descripción</th>
       <th>Fecha de Publicación</th>
-<<<<<<< HEAD
-      <th></th>
-=======
       <th>Precio</th>
       <th>Categoria</th>
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
     </tr>
   </thead>
   <tbody>
@@ -30,13 +21,6 @@
         <td><%= book.title %></td>
         <td><%= book.description %></td>
         <td><%= book.publication_date %></td>
-<<<<<<< HEAD
-        <td>
-          <%= link_to "Mostrar", book %>
-          <%= link_to "Editar", edit_book_path(book) %>
-          <%= link_to "Eliminar", books_path, data: { confirm: "¿Estás seguro de eliminar este libro?" }, method: :delete %>
-        </td>
-=======
         <td>$ <%= book.price %></td>
         <td><%= Category.find(book.category_id).name %></td>
         <% if signed_in? %>
@@ -47,7 +31,6 @@
                           method: :delete,
                           data: { confirm: '¿Estás seguro?' } %></td>
         <% end %>
->>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
       </tr>
     <% end %>
   </tbody>
