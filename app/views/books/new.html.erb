@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Nuevo Libro</h1>
 <%= form_for @book do |f| %>
   <div>
@@ -25,3 +26,36 @@
     <%= f.submit %>
   </div>
 <% end %>
+=======
+<h1>Nuevo Libro</h1>
+<%= form_for @book do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.label :publication_date %>
+    <%= f.date_field :publication_date %>
+  </div>
+  <div>
+    <%= f.label :price %>
+    <%= f.number_field :price, step: :any %>
+  </div>
+  <div>
+    <%= f.label 'category' %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, include_blank: 'seleccione una categoria') %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+>>>>>>> 63c162ed6f6f39aff0fb9217a17c12ac009d172c
